@@ -15,7 +15,7 @@ plotly==5.15.0
 matplotlib==3.7.2
 
 # AI模块 - OCR
-paddlepaddle==2.5.1
+
 paddleocr==2.7.0.3
 pillow==10.0.0
 opencv-python==4.8.0.74

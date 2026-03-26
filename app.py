@@ -22,7 +22,7 @@ from core.matrix_ops import (
     compute_eigenvalue_qr, solve_linear_system, compute_rank
 )
 from ai.ocr_engine import ai_matrix_recognition, parse_ocr_to_matrix
-from ai.knowledge_graph import build_knowledge_graph, recommend_learning_path, visualize_knowledge_graph
+#from ai.knowledge_graph import build_knowledge_graph, recommend_learning_path, visualize_knowledge_graph
 from ai.smart_tutor import generate_step_explanation, smart_tutor_mode, analyze_user_habits
 from viz.plotly_charts import (
     plot_matrix_heatmap, plot_lu_animation, plot_eigenvalue_geometry,

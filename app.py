@@ -22,7 +22,7 @@ from core.matrix_ops import (
     compute_eigenvalue_qr, solve_linear_system, compute_rank
 )
 from ai.ocr_engine import ai_matrix_recognition, parse_ocr_to_matrix
-#from ai.knowledge_graph import build_knowledge_graph, recommend_learning_path, visualize_knowledge_graph
+
 from ai.smart_tutor import generate_step_explanation, smart_tutor_mode, analyze_user_habits
 from viz.plotly_charts import (
     plot_matrix_heatmap, plot_lu_animation, plot_eigenvalue_geometry,
@@ -90,8 +90,7 @@ if 'history' not in st.session_state:
     st.session_state.history = []
 if 'current_matrix' not in st.session_state:
     st.session_state.current_matrix = None
-if 'knowledge_graph' not in st.session_state:
-    st.session_state.knowledge_graph = build_knowledge_graph()
+
 if 'user_habits' not in st.session_state:
     st.session_state.user_habits = {}
 
@@ -463,11 +462,10 @@ def render_learning_mode():
     
     # 知识图谱
     st.subheader("🗺️ 知识图谱导航")
-    G = st.session_state.knowledge_graph
+    
     
     col1, col2 = st.columns([2, 1])
-    with col1:
-        fig = visualize_knowledge_graph(G)
+    
         st.plotly_chart(fig, use_container_width=True)
     
     with col2:
